@@ -33,7 +33,7 @@ def encode(message: str, keyword: str = DEFAULT_KEYWORD) -> str:
     counter = 0
     for sym in message:
         if sym == '\n':
-            result += '\n'
+            result += sym
             continue
         key_sym = keyword[counter]
 
