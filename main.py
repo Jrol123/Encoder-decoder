@@ -1,7 +1,11 @@
 """
 
 """
+
 import Encoder_decoder
-from Encoder_decoder import *
 
 Encoder_decoder.greetings()
+print('')
+Encoder_decoder.Encoder.pip()
+
+Encoder_decoder.pp()
