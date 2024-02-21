@@ -6,7 +6,7 @@ __email__ = 'angap4@gmail.com'
 __github__ = 'https://github.com/Jrol123/Encoder-decoder'
 
 __license__ = 'MIT'
-__version__ = '0.015'
+__version__ = '1.0'
 
 from .Encoder import *
 from .Decoder import *
