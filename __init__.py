@@ -8,8 +8,8 @@ __github__ = 'https://github.com/Jrol123/Encoder-decoder'
 __license__ = 'MIT'
 __version__ = '0.015'
 
-from Encoder import *
-from Decoder import *
+from .Encoder import *
+from .Decoder import *
 
 __all__ = ['pip']  # Перечисление всех функций, доступных извне.
 
