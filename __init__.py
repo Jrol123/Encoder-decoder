@@ -11,7 +11,7 @@ __version__ = '0.015'
 from .Encoder import *
 from .Decoder import *
 
-__all__ = ['encode']  # Перечисление всех функций, доступных извне.
+__all__ = ['encode', 'decode']  # Перечисление всех функций, доступных извне.
 
 
 def greetings():
