@@ -2,6 +2,7 @@
 
 """
 import pytest
+from Encoder import *
 
 
 def setup_module(module):
@@ -13,14 +14,6 @@ def teardown_module(module):
     # teardown_something()
     pass
 
-
-def test_upper():
-    assert 'foo'.upper() == 'FOO'
-
-
-def test_isupper():
-    assert 'FOO'.isupper()
-
-
-def test_failed_upper():
-    assert 'foo'.upper() != 'FOo'
+def test_symbol_count():
+    encode()
+    pass
