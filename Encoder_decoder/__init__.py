@@ -2,7 +2,7 @@
 To be written
 """
 __author__ = 'Artemii Popovkin'
-__version__ = '0.01'
+__version__ = '0.015'
 __license__ = 'MIT'
 __email__ = 'angap4@gmail.com'
 
@@ -10,8 +10,8 @@ __github__ = 'https://github.com/Jrol123/Encoder-decoder'
 
 from .Encoder import *
 from .Decoder import *
-from .test import *
-__all__ = ['Encoder', 'Decoder']
+
+__all__ = ['pip']  # Перечисление всех функций, доступных извне.
 
 
 def greetings():

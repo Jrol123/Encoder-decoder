@@ -2,4 +2,5 @@
 
 """
 from .encoding import *
-__all__ = ['encoding']
+
+__all__ = ['pip']  # Перечисление всех функций, доступных извне.
