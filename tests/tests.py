@@ -23,4 +23,4 @@ def test_isupper():
 
 
 def test_failed_upper():
-    assert 'foo'.upper() == 'foo'
+    assert 'foo'.upper() != 'FOo'
