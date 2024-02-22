@@ -14,6 +14,6 @@ def teardown_module(module):
     # teardown_something()
     pass
 
-def test_symbol_count():
-    encode()
-    pass
+def test_keyword():
+    assert encode("Депрессия", "Депрессия") == "ААААААААА"
+
