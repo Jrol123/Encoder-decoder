@@ -22,13 +22,12 @@ ALPHABET = {'А': 0, 'Б': 1, 'В': 2, 'Г': 3,
             'ч': 57, 'ш': 58, 'щ': 59, 'ъ': 60,
             'ы': 61, 'ь': 62, 'э': 63, 'ю': 64,
             'я': 65,
-            '.': 66, ',': 67, '!': 68, '?':69, ' ': 70, '-': 71}
-
-REV_ALPHABET = {v: k for k, v in ALPHABET.items()}
-SYM_INDEX = len(ALPHABET)
+            '.': 66, ',': 67, '!': 68, '?': 69, ' ': 70, '-': 71}
 
 
-def encode(message: str, keyword: str = DEFAULT_KEYWORD) -> str:
+def encode(message: str, keyword: str = DEFAULT_KEYWORD, alphabet: dict[str, int] = ALPHABET) -> str:
+    rev_alphabet = {v: k for k, v in alphabet.items()}
+    cont_symbols = len(alphabet)
     result = ""
     counter = 0
     for sym in message:
@@ -37,10 +36,10 @@ def encode(message: str, keyword: str = DEFAULT_KEYWORD) -> str:
             continue
         key_sym = keyword[counter]
 
-        diff = ALPHABET[sym] - ALPHABET[key_sym]
-        diff = (diff + SYM_INDEX) % SYM_INDEX
-        result += REV_ALPHABET[diff]
+        diff = alphabet[sym] - alphabet[key_sym]
+        diff = (diff + cont_symbols) % cont_symbols
+        result += rev_alphabet[diff]
 
-        counter= (counter + 1) % len(keyword)
+        counter = (counter + 1) % len(keyword)
 
     return result
